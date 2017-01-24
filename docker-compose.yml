@@ -12,12 +12,23 @@ services:
       context: .
       dockerfile: Dockerfile
     links:
-      - mysql
+      - dropwizard
     ports:
       - '80:80'
     volumes:
-      - './angular:/usr/share/nginx/html:ro'
+      - './angular/app:/usr/share/nginx/html:ro'
   angular:
     image: nhoag/angularjs
     volumes:
       - './angular:/app'
+    tty:
+      true
+  dropwizard:
+    image: mondary/dropwizard
+    links:
+      - mysql
+    ports:
+      - '8080:8080'
+      - '9080:9080'
+    volumes:
+      - './dropwizard:/opt/service'
