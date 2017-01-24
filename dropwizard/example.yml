@@ -15,7 +15,7 @@ database:
   password: ${MYSQL_ROOT_PASSWORD}
 
   # the JDBC URL
-  url: jdbc:mysql://localhost:3306/DWGettingStarted
+  url: jdbc:mysql://mysql:3306/DWGettingStarted
 
 # use the simple server factory if you only want to run on a single port
 #server:
