@@ -1,2 +1,14 @@
 <p>This is the people view.</p>
 <p ng-repeat="person in awesomeThings">name: {{person.fullName}} title: {{person.jobTitle}}</p>
+<div>
+  <h3>Add Person</h3>
+  <form ng-submit="create()">
+    <label for="fullName">Full Name</label>
+    <input type="text" name="fullName" ng-model="fullName"></input>
+
+    <label for="jobTitle">Job Title</label>
+    <input type="text" name="jobTitle" ng-model="jobTitle"></input>
+
+    <input type="submit" value="Add" class="btn btn-primary"/>
+  </form>
+</div>

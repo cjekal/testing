@@ -12,4 +12,8 @@ angular.module('spikeApp')
     this.getAll = function() {
       return $http({ method: 'GET', url: 'http://localhost:8080/people' });
     };
+
+    this.addPerson = function(person) {
+      return $http({ method: 'POST', url: 'http://localhost:8080/people', data: person });
+    };
   });

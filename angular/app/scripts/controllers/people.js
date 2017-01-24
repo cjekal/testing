@@ -13,4 +13,11 @@ angular.module('spikeApp')
     peopleService.getAll().then(function(people) {
       $scope.awesomeThings = people.data;
     });
+
+    $scope.create = function() {
+      peopleService.addPerson({ fullName: $scope.fullName, jobTitle: $scope.jobTitle }).then(function() {
+        $scope.fullName = '';
+        $scope.jobTitle = '';
+      });
+    };
   });
