@@ -15,7 +15,9 @@ angular.module('spikeApp')
     });
 
     $scope.create = function() {
-      peopleService.addPerson({ fullName: $scope.fullName, jobTitle: $scope.jobTitle }).then(function() {
+      var person = { fullName: $scope.fullName, jobTitle: $scope.jobTitle };
+      peopleService.addPerson(person).then(function() {
+        $scope.awesomeThings.push(person);
         $scope.fullName = '';
         $scope.jobTitle = '';
       });
