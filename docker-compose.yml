@@ -24,13 +24,19 @@ services:
     tty:
       true
   dropwizard:
-    image: mondary/dropwizard
+    build:
+      context: .
+      dockerfile: Dockerfile.dropwizard
     links:
       - mysql
     ports:
       - '8080:8080'
-      - '9080:9080'
+      - '8081:8081'
+      - '2003:2003'
+    environment:
+      MYSQL_ROOT_USERNAME: root
+      MYSQL_ROOT_PASSWORD: test
     volumes:
-      - './dropwizard:/opt/service'
+      - './dropwizard:/usr/src/app'
     tty:
       true
