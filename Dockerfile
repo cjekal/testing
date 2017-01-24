@@ -1,0 +1,5 @@
+FROM nginx
+
+MAINTAINER c.jekal
+
+EXPOSE 80
