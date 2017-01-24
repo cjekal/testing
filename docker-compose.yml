@@ -10,7 +10,7 @@ services:
   website:
     build:
       context: .
-      dockerfile: Dockerfile
+      dockerfile: Dockerfile.nginx
     links:
       - dropwizard
     ports:
