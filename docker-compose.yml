@@ -32,3 +32,5 @@ services:
       - '9080:9080'
     volumes:
       - './dropwizard:/opt/service'
+    tty:
+      true
