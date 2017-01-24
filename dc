@@ -1,9 +1,10 @@
 #!/usr/bin/perl
 
 if (@ARGV[0] =~ /^up$/i)          { exec("docker-compose build && docker-compose up -d") }
+elsif (@ARGV[0] =~ /^build$/i)    { exec("docker-compose build") }
 elsif (@ARGV[0] =~ /^down$/i)     { exec("docker-compose down") }
 elsif (@ARGV[0] =~ /^ng_bash$/i)  { exec("docker-compose exec angular /bin/bash") }
 elsif (@ARGV[0] =~ /^dw_bash$/i)  { exec("docker-compose exec dropwizard /bin/bash") }
 elsif (@ARGV[0] =~ /^nx_bash$/i)  { exec("docker-compose exec nginx /bin/bash") }
 elsif (@ARGV[0] =~ /^ps$/i)       { exec("docker-compose ps") }
-else                              { print "allowed commands are up, down, ng_bash, dw_bash, nx_bash" }
+else                              { print "allowed commands are up, down, ng_bash, dw_bash, nx_bash\n" }
