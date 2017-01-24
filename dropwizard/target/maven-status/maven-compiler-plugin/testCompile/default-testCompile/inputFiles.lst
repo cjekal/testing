@@ -1,0 +1,6 @@
+/usr/src/app/src/test/java/com/example/helloworld/resources/PeopleResourceTest.java
+/usr/src/app/src/test/java/com/example/helloworld/resources/ProtectedResourceTest.java
+/usr/src/app/src/test/java/com/example/helloworld/db/PersonDAOTest.java
+/usr/src/app/src/test/java/com/example/helloworld/resources/PersonResourceTest.java
+/usr/src/app/src/test/java/com/example/helloworld/IntegrationTest.java
+/usr/src/app/src/test/java/com/example/helloworld/resources/ProtectedClassResourceTest.java
