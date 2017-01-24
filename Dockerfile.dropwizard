@@ -1,8 +1,0 @@
-FROM ukhomeofficedigital/dropwizard
-
-MAINTAINER c.jekal
-
-CMD ["target/my-java-app.jar", "server"]
-
-EXPOSE 8080
-EXPOSE 8081
