@@ -2,14 +2,14 @@
 
 /**
  * @ngdoc overview
- * @name appApp
+ * @name spikeApp
  * @description
- * # appApp
+ * # spikeApp
  *
  * Main module of the application.
  */
 angular
-  .module('appApp', [
+  .module('spikeApp', [
     'ngRoute',
     'ngSanitize'
   ])

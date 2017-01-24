@@ -7,7 +7,7 @@ services:
       - "3306:3306"
     environment:
       MYSQL_ROOT_PASSWORD: test
-  website:
+  nginx:
     build:
       context: .
       dockerfile: Dockerfile.nginx
@@ -16,11 +16,13 @@ services:
     ports:
       - '80:80'
     volumes:
-      - './angular/app:/usr/share/nginx/html:ro'
+      - './angular:/usr/share/nginx/html:ro'
   angular:
     build:
       context: .
       dockerfile: Dockerfile.angular
+    ports:
+      - '9000:9000'
     volumes:
       - './angular:/app'
     tty:
