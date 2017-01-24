@@ -18,7 +18,9 @@ services:
     volumes:
       - './angular/app:/usr/share/nginx/html:ro'
   angular:
-    image: nhoag/angularjs
+    build:
+      context: .
+      dockerfile: Dockerfile.angular
     volumes:
       - './angular:/app'
     tty:

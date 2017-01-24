@@ -1,0 +1,17 @@
+FROM nhoag/angularjs
+
+MAINTAINER c.jekal "charles.jekal@cgi.com"
+
+WORKDIR /app
+
+USER root
+
+COPY angular/package.json .
+RUN npm install
+
+COPY angular/bower.json .
+RUN bower install --allow-root --config.interactive=false
+
+USER dev
+
+COPY angular/ .
