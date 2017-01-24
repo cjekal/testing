@@ -16,4 +16,8 @@ services:
     ports:
       - '80:80'
     volumes:
-      - './server:/app'
+      - './angular:/usr/share/nginx/html:ro'
+  angular:
+    image: nhoag/angularjs
+    volumes:
+      - './angular:/app'
