@@ -8,10 +8,9 @@
  * Controller of the spikeApp
  */
 angular.module('spikeApp')
-  .controller('PeopleCtrl', function ($scope) {
-    $scope.awesomeThings = [
-      'ppl 1',
-      'ppl 2',
-      'ppl 3'
-    ];
+  .controller('PeopleCtrl', function ($scope, peopleService) {
+    $scope.awesomeThings = null;
+    peopleService.getAll().then(function(people) {
+      $scope.awesomeThings = people.data;
+    });
   });
